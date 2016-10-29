@@ -8,12 +8,12 @@
         <link href="1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
         <style media="screen">
             .control{
-                width: 300px;
-                height: 50px;
+                width: 500px;
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: 100px;
                 border: thin solid black;
+                text-align: center;
             }
             .size{
                 width: 40px;
@@ -21,10 +21,7 @@
             }
             .btn{
                 padding: 2px;
-                margin: 0 auto;
-            }
-            .span{
-                margin-left: 5px;
+                /*text-align: center;*/
             }
             ul{
                 list-style: none;
@@ -34,39 +31,71 @@
                 display: list-item;
                 float: left;
                 margin:0 5px;
+
             }
             .volice{
                 width: 80px;
             }
-            .progress{
-                width: 250px;
-                margin: 0 auto;
+            .progress {
+                margin: 10px auto;
+                width: 350px;
+                background-color: black;
+
+            }
+            .time{
+                /*border: 2px solid black;*/
+                width: 35px;
+                color: white;
+            }
+            .time-left{
+                float: left;
+                margin-right: 10px;
+            }
+            .time-right{
+                float: right;
+                position: relative;
+                float: right;
+                bottom: 15px;
+                margin-right: 10px;
+             }
+            .long{
+                width: 250px !important;
+                margin-right: 5px !important;
+            }
+            .list{
+                text-align: center;
+                margin-top: 10px;
+            }
+            .active{
+                color: red;
             }
         </style>
     </head>
     <body>
-        <audio id='player' >
-            <source src="music/2.mp3">
+        <audio id='player' src="music/卡农-abo.mp3" data-id='0' >
+            <!-- <source src="music/2.mp3"> -->
             您的浏览器不支持 audio 元素。
         </audio>
         <div class="control">
             <div class="btn">
                 <ul>
-                    <li><span class=" glyphicon glyphicon-play"> </span></li>
-                    <li><span class=" glyphicon glyphicon-pause"> </span></li>
-                    <li><span class=" glyphicon glyphicon-backward"> </span></li>
-                    <li><span class=" glyphicon glyphicon-forward"> </span></li>
-                    <li><span class=" glyphicon glyphicon-volume-up"> </span></li>
+                    <!-- <li class=" glyphicon glyphicon-pause"> </li> -->
+                    <li class=" glyphicon glyphicon-backward"> </li>
+                    <li class="start glyphicon glyphicon-play"> </li>
+                    <li class=" glyphicon glyphicon-forward"> </li>
+                    <li class="vol glyphicon glyphicon-volume-up"> </li>
                     <li class="volice"><input class='' type="range" name="name" value=""></li>
                 </ul>
 
             </div>
             <div class="progress">
-                <input class='long'  type="range" name="name" value="0" min='' max='100'>
-
+                <span class='time time-left'>00:00</span>
+                <input class='long'  type="range" name="name" value="0" min='' max=''>
+                <span class='time time-right'>00:00</span>
             </div>
         </div>
-
+        <div class="list">
+        </div>
         <script src='MusicPlayer.js' type="text/javascript">
         </script>
     </body>
