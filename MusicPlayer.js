@@ -162,18 +162,18 @@ var SongPlay = function() {
 
 //auto加载进度条
 var auto = function() {
-                at = setInterval(function(){
-                    //设置进度条最大值
-                    $('.long')[0].max = audio.duration
-                    //获取当前播放时间点
-                    var long = audio.currentTime
-                    // log(long)
-                    //给value赋值，改变进度条
-                    $('.long').val(long)
-                    //改变进度条时间
-                    setTime()
-                        },1000)
-            }
+    at = setInterval(function(){
+        //设置进度条最大值
+        $('.long')[0].max = audio.duration
+        //获取当前播放时间点
+        var long = audio.currentTime
+        // log(long)
+        //给value赋值，改变进度条
+        $('.long').val(long)
+        //改变进度条时间
+        setTime()
+            },1000)
+}
 
 //播放时间转换
 var timeChange = function(time) {
@@ -201,22 +201,35 @@ var setTime = function() {
 var bind = function() {
     //播放按钮
     start()
+
     //静音按钮
     volicTogg()
+
     //滑动条监听
     jump()
+
     //点击歌曲名播放歌曲
     SongPlay()
+
     //上一首
     playBackward(-1)
+
     //下一首
     playNext(1)
 }
 
+//初始化操作
+var load = function() {
+    //加载播放列表
+    list()
+    //给第一首歌加载播放状态
+    $($('.name')[0]).addClass('active')
+}
 //主函数
 var __main = function() {
+    //绑定事件
     bind()
-    list()
-    $($('.name')[0]).addClass('active')
+    //初始化
+    load()
 }
 __main()

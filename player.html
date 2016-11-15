@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+        <link rel="stylesheet" href="play.css" media="screen" title="no title">
+        <title>MusicPlayer</title>
+    </head>
+    <body>
+        <audio id='player' src="music/卡农-abo.mp3" data-id='0' >
+            <source src="music/卡农-abo.mp3">
+            您的浏览器不支持 audio 元素。
+        </audio>
+        <div class="header">
+            <h1>卡农-abo</h1>
+        </div>
+        <div id="id-cd">
+            <img class='cd' src="img/changpian.jpg" alt="图标" />
+        </div>
+        <div class="list list-none">
+            <h3 class='title'>播放列表</h3>
+            <div class="music-name">
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="process">
+                <input class='range' type="range" name="name" value="">
+                <span class="time play-time">00:00</span>
+                <span class="time fenge">/</span>
+                <span class="time total-time">00:00</span>
+
+            </div>
+            <div class="control">
+                <span class='volume'></span>
+                <span class="previous"></span>
+                <span class="play"></span>
+                <span class="next"></span>
+                <span class="menu"></span>
+            </div>
+            <script src='play.js' type="text/javascript"></script>
+        </div>
+    </body>
+</html>

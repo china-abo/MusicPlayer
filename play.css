@@ -1,0 +1,135 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 120px;
+    width: 100%;
+    background-color: lightblue;
+}
+.header{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+h1{
+    text-shadow: 2px 2px 3px gray;
+}
+p{
+    text-shadow: 2px 2px 3px gray;
+
+}
+span{
+    display: inline-block;
+    margin: 0 5px;
+}
+.process{
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    background: lightblue;
+    vertical-align: bottom;
+}
+.control{
+
+    width: 400px;
+    height: 100px;
+    margin:0 auto;
+    text-align: center;
+
+}
+.play{
+    width: 72px;
+    height: 72px;
+    background-image: url(img/Play.png);
+}
+.previous{
+    width: 64px;
+    height: 64px;
+    background-image: url(img/Previous.png);
+}
+.next{
+    width: 64px;
+    height: 64px;
+    background-image: url(img/Next.png);
+}
+.volume{
+    width: 48px;
+    height: 48px;
+    background-image: url(img/Volume_On.png);
+}
+.menu{
+    width: 48px;
+    height: 48px;
+    background-image: url(img/menu.png);
+}
+.play-time, .total-time, .fenge{
+    display: inline-block;
+    margin: 0;
+    vertical-align: bottom;
+    height: 20px;
+    text-shadow: 2px 2px 3px gray;
+
+}
+
+.range{
+    margin-right: 5px;
+    height: 20px;
+    width: 280px;
+}
+.list{
+    position: absolute;
+    bottom: 120px;
+    height: 300px;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    background-color: rgba(0, 0, 0, 0.83);
+    transition-duration: 1s;
+    z-index: 100;
+}
+.list-none{
+    height: 0px;
+}
+#id-cd{
+    text-align: center;
+}
+.cd{
+    width: 400px;
+    /*transform:rotate(360deg);*/
+    /*animation: 5s transform infinite;*/
+}
+.title{
+    display: none;
+    color: white;
+    margin-left: 20px;
+}
+.music-name{
+    margin-top: 50px;
+    text-align: center;
+}
+.name{
+    display: none;
+    color: white;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+table{
+    color: white;
+    margin-left: 20px;
+}
+td{
+    width: 300px;
+    text-align: center;
+}
+.active{
+    color: red;
+}
+
+@keyframes transform {
+        /*to { transform: rotate(360deg)}*/
+    to { transform: rotate(360deg); }
+}
